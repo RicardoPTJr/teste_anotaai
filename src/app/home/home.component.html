@@ -1,0 +1,23 @@
+<div class="search">
+  <input id="inputSearchCardId" type="text" (keydown)="searchCardKeyDown()">
+  <img src="../../assets/search-icon.png" width="34px" height="34px">
+</div>
+<div class="linha">
+  <div *ngFor="let card of cardList" class="card" id="card-{{card.id}}">
+    <div class="btn-close" (click)="closeCard(card.id)">
+      <img src="http://aai-frontend-interview-mock-data.s3-website-sa-east-1.amazonaws.com/assets/close.svg" alt="Close">
+    </div>
+    <div class="card-head">
+      <img src="{{card.img}}" alt="CardHead">
+    </div>
+    <div class="card-type" [style.background-color]="cardTipoBg[toInt(card.type) - 1]">
+      {{cardTipo(card.type)}}
+    </div>
+    <div class="card-title">
+      {{card.title}}
+    </div>
+    <div class="card-content">
+      {{card.description}}
+    </div>
+  </div>
+</div>
