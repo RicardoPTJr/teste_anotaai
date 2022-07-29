@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
          this.cardList = this._homeService.cacheCardList;
       },
       error(err) {
-        console.log(err)
+        console.log(err);
       }
     });
   }
@@ -68,8 +68,6 @@ export class HomeComponent implements OnInit {
         alert('Nenhum resultado para busca ' + searchValue);
       }
     }
-    console.log(searchValue);
-    
   }
 
   public toInt(value: string | undefined) {

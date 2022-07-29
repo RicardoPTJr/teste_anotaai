@@ -37,6 +37,10 @@
   border-radius: 8px;
 }
 
+.card:hover {
+  transform: scale(1.1);
+}
+
 .card .btn-close {
   position: relative;
   z-index: 100;
@@ -51,9 +55,17 @@
   cursor: pointer;
 }
 
+.card .btn-close:hover {
+  border: 2px solid red;
+}
+
 .card .btn-close img {
   opacity: 0.5;
 }
+
+/* .card .btn-close:hover img {
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+} */
 
 .card .card-head {
   position: absolute;
