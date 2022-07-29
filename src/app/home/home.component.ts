@@ -17,9 +17,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this._homeService.getCardList().subscribe({
       next: (res: any) => {
-         console.log(res);
-         this._homeService.cacheCardList = res;
-         this.cardList = this._homeService.cacheCardList;
+        this._homeService.cacheCardList = res;
+        this.cardList = this._homeService.cacheCardList;
       },
       error(err) {
         console.log(err);
@@ -42,7 +41,7 @@ export class HomeComponent implements OnInit {
       case '1': return 'Paisagem';
       case '2': return 'Flor';
       case '3': return 'Pizza';
-    
+
       default: return '';
     }
   }
